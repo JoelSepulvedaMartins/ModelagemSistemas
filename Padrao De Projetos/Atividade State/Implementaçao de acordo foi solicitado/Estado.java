@@ -1,4 +1,4 @@
-public class Estado {
+public abstract class Estado {
    
     public Estado solicita() {
         return this;

@@ -1,9 +1,9 @@
 public class Pedido {
     private Estado estado;
-
+    
     public Pedido(long EstoqueMinimo){
         if (EstoqueMinimo < 1000) {
-            this.estado = new Estado();
+            solicita();
         }else{
         System.exit(0);
         }
@@ -58,11 +58,11 @@ public static void main(String[] args) {
 
     Pedido p1 = new Pedido(900);
 
-    String str = p1.solicita(); // deve retornar “Solicitado”
-    System.out.println("p1-Estado : " + str);
+    //String str = p1.solicita(); // deve retornar “Solicitado”
+    //System.out.println("p1-Estado : " + str);
 
     
-    str = p1.cotacao(); // deve retornar “Cotado”
+    String str = p1.cotacao(); // deve retornar “Cotado”
     System.out.println("p1-Estado : "+str); // deve mostrar “p1-Estado : Cotado”
     
     str = p1.cotacao(); // deve retornar “Cotado” Aqui não houve mudança de estado
